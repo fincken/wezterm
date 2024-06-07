@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -13,15 +13,10 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.95
 
 -- For example, changing the color scheme:
-config.color_scheme = 'catppuccin-macchiato'
-config.font_size = 16
--- config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Medium' })
-config.font = wezterm.font('Dank Mono',
-    {
-        weight = 'Bold',
-    }
-)
-
+config.color_scheme = "catppuccin-macchiato"
+config.font_size = 14
+config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Medium' })
+config.line_height = 1.25
 
 -- and finally, return the configuration to wezterm
 return config
