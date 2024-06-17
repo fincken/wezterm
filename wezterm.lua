@@ -14,9 +14,13 @@ config.window_background_opacity = 0.95
 
 -- For example, changing the color scheme:
 config.color_scheme = "catppuccin-macchiato"
-config.font_size = 14
-config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Medium' })
-config.line_height = 1.25
+config.font_size = 15
+config.font = wezterm.font_with_fallback({
+	{ family = "JetBrainsMono Nerd Font", weight = "Medium" },
+	{ family = "Terminus", weight = "Bold" },
+	"Noto Color Emoji",
+})
+config.line_height = 1.2
 
 -- and finally, return the configuration to wezterm
 return config
